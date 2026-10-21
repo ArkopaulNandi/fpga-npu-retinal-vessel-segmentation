@@ -1,0 +1,88 @@
+NPU_TOP
+│
+├── 0. ALGORITHM / ARCHITECTURE SPECIFICATION
+│   ├── Dataset
+│   ├── Python reference
+│   ├── Segmentation model
+│   ├── Tensor dimensions
+│   ├── Precision
+│   ├── Quantization
+│   ├── Dataflow
+│   └── Tiling
+│
+├── 1. SYSTEM FOUNDATION
+│   ├── Clock & Reset
+│   ├── Register Bank
+│   ├── AXI4-Lite
+│   ├── AXI4-Stream Input
+│   └── AXI4-Stream Output
+│
+├── 2. IMAGE FRONTEND
+│   ├── Frame Controller
+│   ├── Coordinate Generator
+│   ├── ROI
+│   ├── Format Converter
+│   ├── Normalization
+│   ├── Optional Filter
+│   └── Tensor Formatter
+│
+├── 3. PROCESSING ELEMENT
+│   ├── Input Register
+│   ├── Weight Register
+│   ├── Multiplier
+│   ├── MAC
+│   ├── PSUM Register
+│   └── Routing Logic
+│
+├── 4. COMPUTATION CORE
+│   ├── 4×4 PE Array
+│   ├── PE Interconnect
+│   └── Reduction / Accumulation
+│
+├── 5. MEMORY / CNM
+│   ├── Activation Buffers
+│   ├── Weight Buffers
+│   ├── Partial-Sum Buffers
+│   ├── Ping-Pong Buffers
+│   ├── CNM BRAM Banks
+│   └── DMA
+│
+├── 6. DATAFLOW
+│   ├── Activation Routing
+│   ├── Weight Routing
+│   ├── PSUM Routing
+│   ├── Tile Management
+│   └── Output Collection
+│
+├── 7. NPU CONTROL
+│   ├── Main FSM
+│   ├── Layer Controller
+│   ├── Tile Controller
+│   ├── Dataflow Controller
+│   ├── Memory Scheduler
+│   └── PE Controller
+│
+├── 8. CNN OPERATORS
+│   ├── Convolution
+│   ├── Bias
+│   ├── Reconfigurable Activation
+│   ├── Pooling
+│   ├── Scaling
+│   └── Quantization
+│
+├── 9. RETINAL OUTPUT
+│   ├── Segmentation Formatter
+│   ├── Probability / Score
+│   ├── Threshold
+│   ├── Vessel Mask
+│   └── Output Buffer
+│
+└── 10. PERFORMANCE / DEBUG
+    ├── Cycle Counter
+    ├── MAC Counter
+    ├── PE Utilization
+    ├── Memory Counter
+    ├── Stall Counter
+    ├── Layer Counter
+    ├── Error Detector
+    └── Debug MUX
